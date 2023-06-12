@@ -20,7 +20,7 @@ type PropsType = {
     changeStatus: (taskId:string, isDone:boolean) => void;
 }
 
-function TodoList(props: PropsType) {
+function  TodoList(props: PropsType) {
     const [newValue, setNewValue] = useState("");
     const [error, setError] = useState<string>("");
 
@@ -30,6 +30,10 @@ function TodoList(props: PropsType) {
     const onKeyPressHandler = (e:KeyboardEvent<HTMLInputElement>) => {
         setError('');
         if (e.charCode === 13) {
+            if (newValue.trim() === "") {
+                setError('Field is required!!!');
+                return;
+            }
             props.addTask(newValue);
             setNewValue("");
         }
