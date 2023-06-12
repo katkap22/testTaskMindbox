@@ -21,6 +21,16 @@
     margin: 0 auto;
 }
 
+.header {
+    background-color: #e7e6e6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 40px;
+}
+
 h1.title {
     font-size: 4em;
     color: darkgray;
@@ -32,12 +42,14 @@ h1.title {
 
 .input {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .input input {
     box-sizing: border-box;
-    width: 75%;
+    width: 85%;
     height: 50px;
     padding: 5px 10px;
     font-size: 20px;
@@ -53,12 +65,13 @@ h1.title {
     font-weight: 700;
     border: 2px solid #445162;
     padding: 5px 10px;
-    font-size: 25px;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     top: 0;
     position: relative;
-
+    max-width: 20%;
     transition: all 0.5s ease 0s;
+    height: 50px;
 }
 
 .input button:active {
@@ -70,9 +83,11 @@ h1.title {
 }
 
 .list {
+    background-color: #e7e6e6;
     flex: 1 1 auto;
-    padding: 40px;
-    margin-bottom: 50px;
+    padding: 170px 0 50px;
+    /*margin-bottom: 50px;*/
+    width: 100%;
 }
 
 .list li {
@@ -117,6 +132,7 @@ h1.title {
 }
 
 .footer {
+    background-color: #e7e6e6;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;

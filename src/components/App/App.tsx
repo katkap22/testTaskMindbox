@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import s from './App.module.css';
-import TodoList, {TaskType} from "./TodoList";
+import TodoList, {TaskType} from "../TodoList/TodoList";
 import {v1} from "uuid";
-import {getItemFromLS} from "./utils";
+import {GetItemFromLS} from "../utils/utils";
 
 export type FilterValuesType = "all" | "completed" | "active";
 
-const App: React.FC = () => {
+const App = () => {
 
     let [tasks, setTasks] = useState<Array<TaskType>>(
-        getItemFromLS()
+        GetItemFromLS()
     );
     const [filter, setFilter] = useState<FilterValuesType>("all");
     let [counterItemLeft, setCounterItemLeft] = useState<number>(0);
